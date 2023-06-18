@@ -10,11 +10,11 @@ from langchain.schema import (
     AIMessage
 )
 
-
+OPENAI_API_KEY = "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"
 def init():
     load_dotenv()
     
-    if os.getenv("OPENAI_API_KEY") is None or os.getenv("OPENAI_API_KEY") == "":
+    if OPENAI_API_KEY is None:
         print("OPENAI_API_KEY is not set")
         exit(1)
     else:
